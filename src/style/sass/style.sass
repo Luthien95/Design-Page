@@ -1,0 +1,218 @@
+@import general.sass
+
+nav
+    height: 100px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: fixed
+    background-color: white
+    z-index: 100
+    .o-logotype
+        width: 50px
+        height: 50px
+        color: white
+        background-color: black
+        @include flexCenter
+        p
+            font-size: 25px
+            font-family: 'Lobster', cursive
+    ul
+        width: 80%
+        display: flex
+        justify-content: flex-end
+        list-style: none
+        li
+            margin: 10px
+            display: inline-block
+            position: relative    
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                display: inline-block
+                height: 1.2em
+                width: 0px
+                border-bottom: 1.5px solid
+                margin-top: 5px
+            &:hover::after
+                width: 100%
+                animation-name: hoverLine
+                animation-duration: .6s
+            &:hover
+                cursor: pointer
+.c-home
+    width: 100vw
+    height: calc(100vh - 100px)
+    padding-top: 100px
+    font-style: Montserrat
+    &__introducing
+        padding-top: calc(20% - 100px)
+        margin-left: 10%
+        p
+            width: 40%
+            font-weight: lighter
+            line-height: 2
+            &:first-child
+                font-weight: bold
+                margin: 0
+            span
+                animation: blink .5s steps(5, start) infinite
+                margin-top: -1px
+        h1
+            font-size: 50px
+            font-weight: lighter
+            margin: 0
+        
+.c-gallery
+    height: auto
+    ul
+        list-style: none
+        display: flex
+        flex-direction: row
+        padding: 0
+        li
+            margin-left: 2%
+            text-align: center
+            position: relative
+            display: block
+            padding: 10px 20px
+            margin: 20px 0
+            transition: .7s
+            &:hover
+                cursor: pointer
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                border-top: 1px solid black
+                border-bottom: 1px solid black
+                transform: scaleY(2)
+                opacity: 0
+                transition: .7s
+            &:hover::before
+                transform: scaleY(1.2)
+                opacity: 1
+        .active::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-top: 1px solid black
+            border-bottom: 1px solid black
+            transform: scaleY(1.2)
+    .o-gallery-container
+        padding-bottom: 20px
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr))
+        grid-gap: 10px
+        grid-auto-rows: 40vh
+        grid-auto-flow: dense
+        padding: 10px
+        .o-gallery-item
+            overflow: hidden
+            box-sizing: border-box
+            position: relative
+            cursor: pointer
+            img
+                min-width: 100%
+                height: 100%
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+            &:nth-child(5)
+                grid-column-end: span 2
+                grid-row-end: span 2
+            &:nth-child(6)
+                grid-column-end: span 1
+                grid-row-end: span 2
+        .big
+            grid-column-end: span 2
+            grid-row-end: span 2
+            overflow: hidden
+            box-sizing: border-box
+            position: relative
+            cursor: pointer
+            img
+                min-width: 100%
+                height: 100%
+                @include absoluteCenter
+.c-about
+    margin: 10% 10% 2% 10%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    p
+        width: 50%
+        opacity: .4
+        line-height: 1.7
+    h1
+        width: 40%
+        opacity: .6
+        font-weight: lighter
+        margin: 40px
+.c-counter
+    width: 100vw
+    height: 300px
+    @include flexCenter
+    &__single-count
+        width: 20%
+        text-align: center
+        border-right: 1px solid lightgrey
+        &:last-of-type
+            border-right: none
+        h1
+            color: grey
+        p
+            font-size: 12px 
+            font-weight: bold
+            opacity: .2
+.c-footer
+    width: 100vw
+    height: 150px
+    background-color: rgba(212, 212, 212, 0.19)
+    &__contact
+        width: 80vw
+        height: 150px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin-left: 10%
+        p
+            width: 50% 
+            opacity:.5
+            font-size: 12px
+            p
+                width: 100%
+        .o-contact_icons
+            width: 50%
+            display: flex
+            opacity:.5
+            justify-content: flex-end
+            i
+                margin: 10px  
+                transition: scale 2s ease-in-out
+                background-image: -webkit-linear-gradient(left, grey 25%, #FF3CAC 37.5%, #46e4ea, #449fe2 62.5%, grey 85%)
+                background-image: linear-gradient(90deg, grey 25%, #FF3CAC 37.5%, #46e4ea, #449fe2 62.5%, grey 85%)
+                background-position: right center
+                background-size: 400% auto
+                -webkit-background-clip: text
+                background-clip: text
+                -webkit-text-fill-color: transparent
+                text-fill-color: transparent
+                transition: color 200ms linear
+                width: 5%
+                text-align: center
+                &:hover
+                    cursor: pointer
+                    transform: scale(1.5)
+                    background-position: left center
+                    color: #ef9671
+                    transition: background-position 1000ms ease-out
+
+@import responsive.sass

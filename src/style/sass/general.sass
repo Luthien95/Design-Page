@@ -1,0 +1,43 @@
+@mixin flexCenter 
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin absoluteCenter
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+::-webkit-scrollbar
+    width: 10px
+    background: white
+    z-index: 1
+
+::-webkit-scrollbar-thumb
+    width: 10px
+    background: black
+
+body 
+    overflow-x: hidden
+    font-size: 100%
+
+nav,
+.c-gallery,
+.c-about
+    width: 80vw
+    margin-left: 10%
+
+
+@keyframes hoverLine
+    0% 
+        width: 0px
+        left: 50%
+    100%
+        width: 100%
+        left : 0
+
+
+@keyframes blink
+    to
+        visibility: hidden

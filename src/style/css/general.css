@@ -1,0 +1,1 @@
+::-webkit-scrollbar{width:10px;background:#fff;z-index:1}::-webkit-scrollbar-thumb{width:10px;background:#000}body{overflow-x:hidden;font-size:100%}nav,.c-gallery,.c-about{width:80vw;margin-left:10%}@keyframes hoverLine{0%{width:0;left:50%}100%{width:100%;left:0}}@keyframes blink{to{visibility:hidden}}/*# sourceMappingURL=general.css.map */
