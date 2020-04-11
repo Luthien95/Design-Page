@@ -9,7 +9,8 @@
 
 body {
   overflow-x: hidden;
-  font-size: 100%; }
+  font-size: 100%;
+  font-family: Montserrat; }
 
 @keyframes hoverLine {
   0% {
@@ -79,8 +80,7 @@ body {
 .header {
   width: 100vw;
   height: calc(100vh - 100px);
-  padding-top: 100px;
-  font-style: Montserrat; }
+  padding-top: 100px; }
   .header__container {
     position: absolute;
     top: 60%;
@@ -227,7 +227,7 @@ body {
         flex-direction: column; } }
   .footer__text {
     width: 50%;
-    opacity: 0.5;
+    opacity: .5;
     font-size: .9rem; }
     .footer__text--span {
       width: 100%; }
@@ -238,7 +238,7 @@ body {
   .footer__icons {
     width: 50%;
     display: flex;
-    opacity: 0.5;
+    opacity: .5;
     justify-content: flex-end; }
     @media (max-width: 36em) {
       .footer__icons {
