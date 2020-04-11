@@ -1,0 +1,48 @@
+.navigation
+    height: 100px
+    width: 80%
+    margin-left: 10%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: fixed
+    background-color: white
+    z-index: 100
+    &__logotype
+        width: 50px
+        height: 50px
+        color: white
+        background-color: black
+        @include flexCenter
+        &-letter
+            font-size: 1.6rem
+            font-family: 'Lobster', cursive
+    &__list
+        display: flex
+        justify-content: flex-end
+        list-style: none
+        &-item
+            margin: 10px
+            display: inline-block
+            position: relative    
+            &::after
+                content: ''
+                position: absolute
+                left: 0
+                display: inline-block
+                height: 1.2em
+                width: 0px
+                border-bottom: 1.5px solid
+                margin-top: 5px
+            &:hover::after
+                width: 100%
+                animation-name: hoverLine
+                animation-duration: .6s
+            &:hover
+                cursor: pointer
+        @include breakpoint(mobile)
+            font-size: .9rem
+            padding: 0
+    @include breakpoint(mobile)
+        width: calc(100% - 20px)
+        margin: 0 10px;

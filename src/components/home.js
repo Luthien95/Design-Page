@@ -8,9 +8,9 @@ class Home extends Component {
 
       function typeWriter(text, i, functionCallBack) {
         if (i < text.length) {
-          document.querySelector(".o-welcome").innerHTML =
+          document.querySelector(".header__text").innerHTML =
             text.substring(0, i + 1) +
-            '<span aria-hidden="true" className="o-mark">|</span>';
+            '<span aria-hidden="true" className="header__text--span">|</span>';
 
           setTimeout(function() {
             typeWriter(text, i + 1, functionCallBack);
@@ -37,11 +37,11 @@ class Home extends Component {
     });
 
     return (
-      <div className="c-home">
-        <div className="c-home__introducing">
-          <p className="o-welcome">WELCOME</p>
-          <h1>Design & Design Website</h1>
-          <p>
+      <div className="header">
+        <div className="header__container">
+          <p className="header__text header__text--bold">WELCOME</p>
+          <h1 className="header__label">Design Studio Website</h1>
+          <p className="header__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh
             augue, suscipit a, scelerisque sed, lacinia in, mi.
           </p>

@@ -1,0 +1,27 @@
+.header
+    width: 100vw
+    height: calc(100vh - 100px)
+    padding-top: 100px
+    font-style: Montserrat
+    &__container
+        position: absolute
+        top: 60%
+        transform: translateY(-50%)
+        margin-left: 10%
+    &__text
+        width: 50%
+        font-weight: lighter
+        line-height: 2
+        &--bold
+            width: 100%
+            font-weight: bold
+            margin: 0
+        &--span
+            animation: blink .5s steps(5, start) infinite
+            margin-top: -1px
+        @include breakpoint(phablet)
+            width: 80%
+    &__label
+        font-size: 3rem
+        font-weight: lighter
+        margin: 0

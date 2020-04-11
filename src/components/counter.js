@@ -24,26 +24,30 @@ class Counter extends Component {
   }
   render() {
     return (
-      <div className="c-counter">
+      <div className="counter-section">
         <Waypoint
           onEnter={this._setMessage.bind(this, "Waypoint entered")}
           onLeave={this._setMessage.bind(this, "Waypoint left")}
         />
-        <div className="c-counter__single-count">
-          <h1>{this._renderMessage(5)}</h1>
-          <p>YEARS AS A WEB DESIGNER</p>
+        <div className="counter-section__single-count">
+          <h1 className="counter-section__header">{this._renderMessage(5)}</h1>
+          <p className="counter-section__text">YEARS AS A WEB DESIGNER</p>
         </div>
-        <div className="c-counter__single-count">
-          <h1>{this._renderMessage(423)}</h1>
-          <p>PROJECTS MADE</p>
+        <div className="counter-section__single-count">
+          <h1 className="counter-section__header">
+            {this._renderMessage(423)}
+          </h1>
+          <p className="counter-section__text">PROJECTS MADE</p>
         </div>
-        <div className="c-counter__single-count">
-          <h1>{this._renderMessage(21)}</h1>
-          <p>MEMBERS IN TEAM</p>
+        <div className="counter-section__single-count">
+          <h1 className="counter-section__header">{this._renderMessage(21)}</h1>
+          <p className="counter-section__text">MEMBERS IN TEAM</p>
         </div>
-        <div className="c-counter__single-count">
-          <h1>{this._renderMessage(1467)}</h1>
-          <p>CUPS OF COFFEE</p>
+        <div className="counter-section__single-count">
+          <h1 className="counter-section__header">
+            {this._renderMessage(1467)}
+          </h1>
+          <p className="counter-section__text">CUPS OF COFFEE</p>
         </div>
       </div>
     );

@@ -1,0 +1,23 @@
+.about-section
+    margin: 10% 10% 2% 10%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__text
+        width: 50%
+        opacity: .4
+        line-height: 1.7
+        @include breakpoint(tablet)
+            width: 100%
+    &__header
+        width: 40%
+        opacity: .6
+        font-weight: lighter
+        margin: 40px
+        &--span
+            font-weight: bold
+            margin: 0
+        @include breakpoint(tablet)
+            width: 100%
+    @include breakpoint(tablet)
+        flex-direction: column

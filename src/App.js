@@ -19,11 +19,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <div className="o-logotype">
-            <p>A</p>
+        <nav className="navigation">
+          <div className="navigation__logotype">
+            <p className="navigation__logotype-letter">A</p>
           </div>
-          <ul>
+          <ul className="navigation__list">
             <li
               onClick={() =>
                 scrollToComponent(this.Home, {
@@ -32,6 +32,7 @@ class App extends Component {
                   duration: 1500
                 })
               }
+              className="navigation__list-item"
             >
               Home
             </li>
@@ -43,6 +44,7 @@ class App extends Component {
                   duration: 1500
                 })
               }
+              className="navigation__list-item"
             >
               Gallery
             </li>
@@ -54,6 +56,7 @@ class App extends Component {
                   duration: 1500
                 })
               }
+              className="navigation__list-item"
             >
               About us
             </li>
@@ -65,6 +68,7 @@ class App extends Component {
                   duration: 1500
                 })
               }
+              className="navigation__list-item"
             >
               Contact
             </li>
